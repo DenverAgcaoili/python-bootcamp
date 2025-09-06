@@ -5,5 +5,9 @@
 	...
 	Line number
 """
+def line_generator(number):
+    for x in range(1,number + 1):
+        print(f"Line {x}")
 
 # TODO: Use the function once
+line_generator(int(input("Enter a number: ")))
