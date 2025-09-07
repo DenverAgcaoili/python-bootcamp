@@ -1,3 +1,5 @@
+import json
+
 def add(inventory, item):
     """Add a new item (dict) to the inventory (list[dict])"""
     inventory.append(item)
@@ -28,7 +30,15 @@ def show(inventory):
 
 def save(inventory, filepath):
     """TODO: Save the inventory (list[dict]) to a filepath"""
+    with open(filepath,"w") as file:
+        json.dump(inventory,file)
 
+def load(filepath):
+    """TODO: Return a list[dict] from a filepath"""
+
+    with open(filepath,"r") as file:
+        data = json.load(file)
+        return data
 
 def main():
     running = True
@@ -60,6 +70,10 @@ def main():
         elif command == "save":
             filepath = input("Filepath: ")
             save(inventory, filepath)
+
+        elif command == "load":
+            filepath = input("Filepath: ")
+            inventory = load(filepath)
 
         elif command == "exit":
             running = False

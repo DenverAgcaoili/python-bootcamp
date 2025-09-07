@@ -27,6 +27,7 @@ def main():
 
     while running:
         command = input("Command: ")
+
         if command == "spend":
             spend(current_expenses)
         elif command == "refund":
