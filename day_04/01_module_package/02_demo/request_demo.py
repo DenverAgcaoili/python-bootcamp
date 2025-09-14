@@ -11,3 +11,5 @@ if response.status_code == 200:
     print(joke['punchline'])
 else:
     print("Failed. Server said:", response.status_code)
+
+print(type(response))

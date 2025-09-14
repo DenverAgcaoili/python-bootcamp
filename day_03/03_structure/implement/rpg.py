@@ -50,6 +50,6 @@ print(knight_1._defense)
 mage_1.attack(knight_1)
 print(knight_1._health)
 
- c
+
 
 
